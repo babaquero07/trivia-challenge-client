@@ -1,0 +1,45 @@
+.container {
+  display: grid;
+  width: 100vw;
+  height: 100vh;
+}
+
+.containerContent {
+  border: 1px solid red;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.containerContent h1 {
+  font-size: 3rem;
+  color: #fff;
+  font-weight: 700;
+  text-align: center;
+}
+
+.containerContent p {
+  font-size: 1.5rem;
+  width: 100%;
+  text-align: center;
+  color: #a1a7c8;
+}
+
+.containerContent button {
+  padding: 0.8rem 1.5rem;
+  border: none;
+  border-radius: 1rem;
+  background: #6b9fed;
+}
+
+.containerContent button:hover {
+  cursor: pointer;
+}
+
+.containerContent button a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 1.2rem;
+  font-weight: 500;
+}

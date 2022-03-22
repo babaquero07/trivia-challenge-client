@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap");
+
 * {
   margin: 0;
   padding: 0;
@@ -6,4 +8,18 @@
   box-sizing: border-box;
   list-style: none;
   text-decoration: none;
+}
+
+:root {
+  --color-bg: #1f1f38;
+  --button-bg-color: #6b9fed;
+  --title-color: #fff;
+  --text-color: #a1a7c8;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background: var(--color-bg);
+  color: var(--text-color);
+  background-image: url("./Assets/Images/az-subtle.png");
 }

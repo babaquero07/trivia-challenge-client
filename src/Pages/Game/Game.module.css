@@ -1,0 +1,23 @@
+.gameContainer {
+  /* justify-content: center; */
+  /* flex-wrap: wrap; */
+  position: relative;
+}
+
+.gameContainer__title {
+  margin: 2rem 0;
+  text-align: center;
+}
+
+.gameContainer__backLink {
+  border: 1px solid wheat;
+  font-size: 16px;
+  color: #ffffff;
+  background-color: #252d4a;
+  border-radius: 15px;
+  padding: 10px 40px;
+  cursor: pointer;
+  position: absolute;
+  left: 30rem;
+  top: 28rem;
+}

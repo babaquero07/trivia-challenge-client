@@ -13,6 +13,7 @@
 :root {
   --color-bg: #1f1f38;
   --button-bg-color: #6b9fed;
+  --card-bg-color: #a1a7c8;
   --title-color: #fff;
   --text-color: #a1a7c8;
 }
@@ -20,6 +21,11 @@
 body {
   font-family: "Poppins", sans-serif;
   background: var(--color-bg);
-  color: var(--text-color);
   background-image: url("./Assets/Images/az-subtle.png");
+}
+
+h1 {
+  color: var(--title-color);
+  font-weight: 600;
+  font-size: 2rem;
 }

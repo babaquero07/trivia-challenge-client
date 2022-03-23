@@ -1,0 +1,32 @@
+.categoryCardContainer {
+  background-color: #81457b;
+  border: 1px solid white;
+  width: 25%;
+  height: 8rem;
+  display: inline-block;
+  border-radius: 1rem;
+  padding: 1rem;
+  margin: 1rem;
+  position: relative;
+}
+
+.categoryCardContainer h1 {
+  font-size: 1.2rem;
+  width: 100%;
+  text-align: left;
+}
+
+.categoryCardContainer a {
+  color: #fff;
+  text-decoration: none;
+  position: absolute;
+  right: 2rem;
+  bottom: 0.8rem;
+  border: 1px solid wheat;
+  border-radius: 1rem;
+  padding: 0.4rem;
+}
+
+.categoryCardContainer a:hover {
+  color: #fff;
+}

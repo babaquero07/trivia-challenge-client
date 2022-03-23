@@ -1,0 +1,11 @@
+.homeContainer__title {
+  text-align: center;
+  margin: 2rem 0;
+}
+
+.cardsContainer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 4rem 0;
+}

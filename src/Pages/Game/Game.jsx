@@ -7,8 +7,7 @@ const axios = require("axios");
 const Game = () => {
   const { category } = useParams();
   //Elimino espacios y convierto en minusculas
-  category.toLowerCase().replace(/\s+/g, "");
-
+  category.toLowerCase();
   const REQUEST_URL = `http://localhost:3001/api/questions/${category}`;
 
   const [quiz, setQuiz] = useState({});

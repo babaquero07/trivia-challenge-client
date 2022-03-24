@@ -36,14 +36,6 @@
 
 .tableContent tbody tr {
   border-bottom: 1px solid #dddddd;
-}
-
-.tableContent tbody tr:nth-of-type(even) {
-  background-color: powderblue;
-}
-
-.tableContent tbody tr:last-of-type {
-  /* border-bottom: 2px solid #009879; */
   background-color: powderblue;
 }
 

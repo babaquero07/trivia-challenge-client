@@ -6,7 +6,6 @@
   box-shadow: 1px 1px 25px rgba(0, 0, 0, 0.35);
   border-radius: 10px;
   border: 6px solid #305a72;
-  /* z-index: 2; */
   top: 9.5rem;
   position: absolute;
 }
@@ -68,7 +67,6 @@
   padding: 10px 20px;
   text-decoration: none;
   border-radius: 16px;
-  /* font: 12px Arial, Helvetica, sans-serif; */
 }
 
 .formContainer ul li input[type="button"]:hover,

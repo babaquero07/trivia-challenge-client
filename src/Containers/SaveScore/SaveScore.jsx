@@ -2,7 +2,7 @@ import React, { useRef } from "react";
 import style from "./SaveScore.module.css";
 import swal from "sweetalert";
 import { useNavigate } from "react-router-dom";
-import scoresServices from "../Services/score";
+import scoresServices from "../../Services/score";
 
 const SaveScore = ({ quiz, responses, score }) => {
   quiz = quiz[0];

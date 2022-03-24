@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import style from "./Quiz.module.css";
 import { useParams } from "react-router-dom";
-import SaveScore from "../../Containers/SaveScore";
+import SaveScore from "../../Containers/SaveScore/SaveScore";
 
 const Quiz = ({ quiz }) => {
   const { category } = useParams();

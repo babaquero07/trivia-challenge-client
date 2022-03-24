@@ -1,0 +1,57 @@
+.scoresContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.scoresContainer h1 {
+  width: 100%;
+  text-align: center;
+  margin: 2rem 0;
+}
+
+.tableContent {
+  border-collapse: collapse;
+  font-size: 0.9em;
+  font-family: sans-serif;
+  min-width: 400px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+  border: 1px solid salmon;
+}
+
+.tableContent thead tr {
+  background-color: powderblue;
+  border: 1px solid black;
+  color: #000;
+  text-align: center;
+}
+
+.tableContent th,
+.tableContent td {
+  padding: 12px 15px;
+  border: 1px solid black;
+  text-align: center;
+}
+
+.tableContent tbody tr {
+  border-bottom: 1px solid #dddddd;
+}
+
+.tableContent tbody tr:nth-of-type(even) {
+  background-color: powderblue;
+}
+
+.tableContent tbody tr:last-of-type {
+  /* border-bottom: 2px solid #009879; */
+  background-color: powderblue;
+}
+
+.optionButton {
+  border-radius: 50%;
+  padding: 0.8rem;
+  margin: 0 5px;
+  background-color: powderblue;
+  color: rgb(223, 43, 43);
+  cursor: pointer;
+}

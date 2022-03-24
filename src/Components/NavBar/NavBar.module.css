@@ -1,0 +1,18 @@
+.navBar {
+  display: flex;
+  width: 100vw;
+  margin: 1rem 0;
+  padding: 1rem 0;
+  justify-content: space-evenly;
+  border-bottom: 1px solid yellowgreen;
+}
+
+.navBar__link {
+  color: rgb(255, 255, 255);
+  font-size: 1.1rem;
+  cursor: pointer;
+}
+
+.navBar__link:hover {
+  color: blanchedalmond;
+}

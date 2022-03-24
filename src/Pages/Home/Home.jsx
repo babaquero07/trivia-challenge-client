@@ -4,10 +4,10 @@ import style from "./Home.module.css";
 
 const Home = () => {
   const categories = [
-    "General Knowledge",
+    "Art",
     "History",
     "Vehicles",
-    "Video Games",
+    "Geography",
     "Sports",
     "Music",
   ];

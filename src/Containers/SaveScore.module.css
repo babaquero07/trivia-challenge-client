@@ -1,0 +1,78 @@
+.formContainer {
+  max-width: 500px;
+  background: #fafafa;
+  padding: 60px 30px;
+  margin: 50px auto;
+  box-shadow: 1px 1px 25px rgba(0, 0, 0, 0.35);
+  border-radius: 10px;
+  border: 6px solid #305a72;
+  /* z-index: 2; */
+  top: 9.5rem;
+  position: absolute;
+}
+
+.formContainer ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.formContainer ul li {
+  display: block;
+  margin-bottom: 10px;
+  min-height: 35px;
+}
+
+.formContainer ul li .field__style {
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  padding: 8px;
+  outline: none;
+  border: 1px solid #b0cfe0;
+  transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -ms-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+}
+
+.formContainer ul li .field__style:focus {
+  box-shadow: 0 0 5px #b0cfe0;
+  border: 1px solid #b0cfe0;
+}
+
+.formContainer ul li .field__split {
+  width: 49%;
+}
+.formContainer ul li .field__full {
+  width: 100%;
+}
+
+.formContainer ul li input.align__left {
+  float: left;
+}
+.formContainer ul li input.align__right {
+  float: right;
+}
+
+.formContainer ul li input[type="button"],
+.formContainer ul li input[type="submit"] {
+  -moz-box-shadow: inset 0px 1px 0px 0px #3985b1;
+  -webkit-box-shadow: inset 0px 1px 0px 0px #3985b1;
+  box-shadow: inset 0px 1px 0px 0px #3985b1;
+  background-color: #216288;
+  border: 1px solid #17445e;
+  display: inline-block;
+  cursor: pointer;
+  color: #ffffff;
+  padding: 10px 20px;
+  text-decoration: none;
+  border-radius: 16px;
+  /* font: 12px Arial, Helvetica, sans-serif; */
+}
+
+.formContainer ul li input[type="button"]:hover,
+.formContainer ul li input[type="submit"]:hover {
+  background: linear-gradient(to bottom, #2d77a2 5%, #337da8 100%);
+  background-color: #28739e;
+}

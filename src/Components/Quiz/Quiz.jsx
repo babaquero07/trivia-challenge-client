@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import style from "./Quiz.module.css";
 import { useParams } from "react-router-dom";
+import SaveScore from "../../Containers/SaveScore";
 
 const Quiz = ({ quiz }) => {
   const { category } = useParams();
@@ -9,16 +10,13 @@ const Quiz = ({ quiz }) => {
   const [score, setScore] = useState(0);
   const [isFinished, setIsFinished] = useState(false);
   const [areDisabled, setAreDisabled] = useState(false);
-  const [responses, setResponses] = useState({});
+  const [responses, setResponses] = useState([]);
+  const [showSaveScore, setShowSaveScore] = useState(false);
 
   const handleAnswerSubmit = (isCorrect, e) => {
     if (isCorrect) setScore(score + 1);
 
-    console.log(typeof e.target.value);
-    setResponses({
-      ...responses,
-      [e.target.name]: e.target.value,
-    });
+    setResponses([...responses, e.target.value]);
 
     e.target.classList.add(
       isCorrect ? `${style.correct}` : `${style.incorrect}`
@@ -36,6 +34,10 @@ const Quiz = ({ quiz }) => {
     }, 1300);
   };
 
+  const handleShowSaveScore = () => {
+    setShowSaveScore(!showSaveScore);
+  };
+
   if (isFinished)
     return (
       <div className={style.gameOverContainer}>
@@ -50,7 +52,15 @@ const Quiz = ({ quiz }) => {
           {" "}
           Play again
         </button>
-        <button className={style.gameOverContainer__button}>Save score</button>
+        <button
+          className={style.gameOverContainer__button}
+          onClick={handleShowSaveScore}
+        >
+          Save score
+        </button>
+        {showSaveScore && (
+          <SaveScore quiz={quiz} responses={responses} score={score} />
+        )}
       </div>
     );
 
@@ -70,7 +80,6 @@ const Quiz = ({ quiz }) => {
             <button
               key={index + 1}
               disabled={areDisabled}
-              name={quiz[actualQuestion].question}
               value={answer.answer}
               className={style.optionButton}
               onClick={(e) => handleAnswerSubmit(answer.isCorrect, e)}

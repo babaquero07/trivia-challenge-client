@@ -12,6 +12,11 @@ const Navbar = () => {
         </Link>
       </li>
       <li>
+        <a href="/scores" className={style.navBar__link}>
+          Scores
+        </a>
+      </li>
+      <li>
         <a href="/play/art" className={style.navBar__link}>
           Art Quiz
         </a>

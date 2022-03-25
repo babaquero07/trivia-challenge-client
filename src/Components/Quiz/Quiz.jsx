@@ -77,15 +77,24 @@ const Quiz = ({ quiz }) => {
         </div>
         <div className={style.rightSide}>
           {quiz[actualQuestion].options.map((answer, index) => (
-            <button
-              key={index + 1}
-              disabled={areDisabled}
-              value={answer.answer}
-              className={style.optionButton}
-              onClick={(e) => handleAnswerSubmit(answer.isCorrect, e)}
-            >
-              {answer.answer}
-            </button>
+            <div key={index + 1}>
+              <button
+                disabled={areDisabled}
+                value={answer.answer}
+                className={style.optionButton}
+                onClick={(e) => handleAnswerSubmit(answer.isCorrect, e)}
+              >
+                {answer.answer}
+              </button>
+              <button
+                disabled={areDisabled}
+                value={answer.answer2}
+                className={style.optionButton}
+                onClick={(e) => handleAnswerSubmit(answer.isCorrect2, e)}
+              >
+                {answer.answer2}
+              </button>
+            </div>
           ))}
         </div>
       </div>

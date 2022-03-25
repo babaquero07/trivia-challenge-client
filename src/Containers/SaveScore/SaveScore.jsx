@@ -19,7 +19,6 @@ const SaveScore = ({ quiz, responses, score }) => {
       responses,
       score,
     };
-
     scoresServices
       .postScore(data)
       .then(() => {

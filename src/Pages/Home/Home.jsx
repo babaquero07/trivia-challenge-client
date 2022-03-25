@@ -1,7 +1,7 @@
 import React from "react";
 import CategoryCard from "../../Components/CategoryCard/CategoryCard";
 import style from "./Home.module.css";
-
+import CreateQuestion from "../../Containers/CreateQuestion/CreateQuestion";
 const Home = () => {
   const categories = [
     "Art",
@@ -22,6 +22,7 @@ const Home = () => {
           <CategoryCard key={index} title={category} />
         ))}
       </div>
+      <CreateQuestion />
     </div>
   );
 };

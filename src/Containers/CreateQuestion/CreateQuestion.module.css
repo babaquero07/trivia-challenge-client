@@ -1,0 +1,76 @@
+.createQuestionContainer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  position: relative;
+}
+
+.createQuestionContainer h1 {
+  width: 100%;
+  text-align: center;
+}
+.formContainer {
+  border: 1px solid orange;
+  padding: 1rem;
+  border-radius: 1rem;
+}
+
+.formContainer__category {
+  /* border: 1px solid green; */
+  text-align: center;
+}
+
+.formContainer__category label {
+  color: rgb(31, 148, 128);
+  margin: 1rem;
+  font-size: 1.2rem;
+}
+
+.formContainer__category select {
+  background-color: #81457b;
+  color: wheat;
+  text-align: center;
+  font-size: 1rem;
+  border-radius: 1rem;
+}
+
+.formContainer__question {
+  display: block;
+  margin: 1rem auto;
+  padding: 0.6rem 3.5rem;
+  border-radius: 0.7rem;
+  background-color: rgb(0, 0, 0);
+  color: #fff;
+  font-size: 1rem;
+}
+
+.formContainer__correctOption {
+  display: block;
+  color: rgb(31, 148, 128);
+  text-align: center;
+  font-size: 1.5rem;
+}
+
+.optionsContainer {
+  margin: 1rem auto;
+  text-align: center;
+}
+
+.optionsContainer label {
+  margin: 0 1rem;
+  color: #fff;
+}
+
+.formContainer__createQuestion {
+  display: block;
+  margin: 0 auto;
+  padding: 0.7rem;
+  border-radius: 1rem;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.formContainer__createQuestion:hover {
+  background: rgb(31, 148, 128);
+  color: #fff;
+}

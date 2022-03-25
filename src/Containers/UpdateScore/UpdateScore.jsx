@@ -5,7 +5,6 @@ import scoresServices from "../../Services/score";
 import style from "../SaveScore/SaveScore.module.css";
 
 const UpdateScore = ({ quiz }) => {
-  console.log(quiz);
   const form = useRef(null);
   const navigate = useNavigate();
 

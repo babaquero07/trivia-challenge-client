@@ -1,6 +1,5 @@
 .container {
   display: grid;
-  width: 100vw;
   height: 100vh;
 }
 
@@ -36,7 +35,7 @@
   cursor: pointer;
 }
 
-.containerContent button a {
+.link {
   text-decoration: none;
   color: #fff;
   font-size: 1.2rem;

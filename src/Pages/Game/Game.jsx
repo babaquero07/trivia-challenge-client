@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { useParams, Link } from "react-router-dom";
 import Quiz from "../../Components/Quiz/Quiz";
 import style from "./Game.module.css";
+import Loading from "../../Components/Loading/Loading";
 const axios = require("axios");
 
 const Game = () => {
@@ -24,7 +25,7 @@ const Game = () => {
     }
   }, []);
 
-  if (isLoading) return <h1>Cargando...</h1>;
+  if (isLoading) return <Loading />;
 
   return (
     <div className={style.gameContainer}>

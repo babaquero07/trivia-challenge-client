@@ -5,6 +5,7 @@ import swal from "sweetalert";
 import { GrUpdate } from "react-icons/gr";
 import { FiDelete } from "react-icons/fi";
 import { useNavigate } from "react-router-dom";
+import Loading from "../../Components/Loading/Loading";
 
 const Scores = () => {
   const [scoresData, setScoresData] = useState(null);
@@ -37,7 +38,7 @@ const Scores = () => {
       });
   };
 
-  if (isLoading) return <h1>Cargando...</h1>;
+  if (isLoading) return <Loading />;
 
   return (
     <div className={style.scoresContainer}>

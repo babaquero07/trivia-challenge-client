@@ -5,6 +5,7 @@ import Home from "./Pages/Home/Home";
 import Game from "./Pages/Game/Game";
 import Scores from "./Pages/Scores/Scores";
 import Navbar from "./Components/NavBar/NavBar";
+import Quizzes from "./Pages/Quizzes/Quizzes";
 
 const App = () => {
   return (
@@ -15,6 +16,7 @@ const App = () => {
         <Route exact path="/home" element={<Home />} />
         <Route exact path="/play/:category" element={<Game />} />
         <Route exact path="/scores" element={<Scores />} />
+        <Route exact path="/quizzes" element={<Quizzes />} />
         <Route exact path="*" element={<LandingPage />} />
       </Routes>
     </BrowserRouter>

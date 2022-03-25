@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const BASE_URL = "http://localhost:3001/api/scores";
+const BASE_URL = "/api/scores";
 
 const getAllScores = async () => (await axios.get(BASE_URL)).data;
 

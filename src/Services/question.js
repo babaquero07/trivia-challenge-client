@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const BASE_URL = "http://localhost:3001/api/questions";
+const BASE_URL = "/api/questions";
 
 const getAllQuestions = async () => (await axios.get(BASE_URL)).data;
 

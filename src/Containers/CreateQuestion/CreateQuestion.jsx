@@ -34,7 +34,6 @@ const CreateQuestion = () => {
         },
       ],
     };
-    console.log(data);
     questionServices
       .postQuestion(data)
       .then(() => {
@@ -55,7 +54,7 @@ const CreateQuestion = () => {
 
   return (
     <div className={style.createQuestionContainer}>
-      <h1>Create question</h1>
+      <h1>Create a question</h1>
       <form ref={form} onSubmit={handleSubmit} className={style.formContainer}>
         <div className={style.formContainer__category}>
           <label htmlFor="categories">Choose one category</label>

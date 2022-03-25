@@ -46,7 +46,6 @@ const Scores = () => {
         <thead>
           <tr>
             <th>Username</th>
-            <th>Email</th>
             <th>Category</th>
             <th>Score</th>
             <th>Options</th>
@@ -57,10 +56,9 @@ const Scores = () => {
             scoresData.map((info, ind) => (
               <tr key={info.id}>
                 <td key={ind}>{info.username}</td>
-                <td key={ind + 1}>{info.email}</td>
-                <td key={ind + 2}>{info.quizCategory}</td>
-                <td key={ind + 3}>{info.score}</td>
-                <td key={ind + 4}>
+                <td key={ind + 1}>{info.quizCategory}</td>
+                <td key={ind + 2}>{info.score}</td>
+                <td key={ind + 3}>
                   <button className={style.optionButton}>
                     <GrUpdate />
                   </button>

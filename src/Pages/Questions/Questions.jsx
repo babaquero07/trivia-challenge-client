@@ -6,6 +6,7 @@ import { FiDelete } from "react-icons/fi";
 import { useNavigate } from "react-router-dom";
 import Loading from "../../Components/Loading/Loading";
 import questionServices from "../../Services/question";
+import UpdateQuestion from "../../Containers/UpdateQuestion/UpdateQuestion";
 
 const Questions = () => {
   const navigate = useNavigate();
@@ -51,6 +52,9 @@ const Questions = () => {
 
   return (
     <div className={style.score}>
+      {toggleUpdateForm && questionToUpdate && (
+        <UpdateQuestion question={questionToUpdate} />
+      )}
       <h1>Questions</h1>
       <div className={style.questionsContainer}>
         <table className={style.tableContent}>

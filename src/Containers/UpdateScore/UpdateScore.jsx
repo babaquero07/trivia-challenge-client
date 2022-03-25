@@ -1,11 +1,11 @@
 import React, { useRef } from "react";
-import style from "./SaveScore.module.css";
 import swal from "sweetalert";
 import { useNavigate } from "react-router-dom";
 import scoresServices from "../../Services/score";
+import style from "../SaveScore/SaveScore.module.css";
 
-const SaveScore = ({ quiz, responses, score }) => {
-  quiz = quiz[0];
+const UpdateScore = ({ quiz }) => {
+  console.log(quiz);
   const form = useRef(null);
   const navigate = useNavigate();
 
@@ -13,21 +13,20 @@ const SaveScore = ({ quiz, responses, score }) => {
     e.preventDefault();
     const formData = new FormData(form.current);
     const data = {
+      scoreID: quiz.id,
       username: formData.get("username"),
-      email: formData.get("email"),
-      quiz,
-      responses,
-      score,
+      category: formData.get("category"),
+      score: formData.get("score"),
     };
 
     scoresServices
-      .postScore(data)
+      .updateScore(data)
       .then(() => {
-        swal("Score saved sucessfully", {
+        swal("Score updated successfully", {
           icon: "success",
         });
         setTimeout(() => {
-          navigate("/scores");
+          navigate("/home");
         }, 2500);
       })
       .catch((err) => {
@@ -39,6 +38,7 @@ const SaveScore = ({ quiz, responses, score }) => {
 
   return (
     <form ref={form} className={style.formContainer} onSubmit={handleSubmit}>
+      <h2>Update Score</h2>
       <ul>
         <li>
           <input
@@ -48,19 +48,26 @@ const SaveScore = ({ quiz, responses, score }) => {
             placeholder="Username"
           />
           <input
-            type="email"
-            name="email"
+            type="text"
+            name="category"
+            className={`${style.field__style} ${style.field__split} ${style.align__left}`}
+            placeholder="Category"
+          />
+          <input
+            type="number"
+            name="score"
+            min="0"
+            max="6"
             className={`${style.field__style} ${style.field__split} ${style.align__right}`}
-            placeholder="Email"
-            required
+            placeholder="Score"
           />
         </li>
         <li>
-          <input type="submit" defaultValue="Send Message" />
+          <input type="submit" defaultValue="Update" />
         </li>
       </ul>
     </form>
   );
 };
 
-export default SaveScore;
+export default UpdateScore;

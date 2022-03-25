@@ -6,10 +6,14 @@ import { GrUpdate } from "react-icons/gr";
 import { FiDelete } from "react-icons/fi";
 import { useNavigate } from "react-router-dom";
 import Loading from "../../Components/Loading/Loading";
+import UpdateScore from "../../Containers/UpdateScore/UpdateScore";
 
 const Scores = () => {
   const [scoresData, setScoresData] = useState(null);
+  const [scoreToUpdate, setScoreToUpdate] = useState(null);
   const [isLoading, setIsLoading] = useState(true);
+  const [toggleUpdateForm, setToggleUpdateForm] = useState(false);
+
   const navigate = useNavigate();
 
   useEffect(() => {
@@ -38,6 +42,11 @@ const Scores = () => {
       });
   };
 
+  const handleUpdate = (info) => {
+    setToggleUpdateForm(!toggleUpdateForm);
+    setScoreToUpdate(info);
+  };
+
   if (isLoading) return <Loading />;
 
   return (
@@ -60,7 +69,10 @@ const Scores = () => {
                 <td key={ind + 1}>{info.quizCategory}</td>
                 <td key={ind + 2}>{info.score}</td>
                 <td key={ind + 3}>
-                  <button className={style.optionButton}>
+                  <button
+                    className={style.optionButton}
+                    onClick={() => handleUpdate(info)}
+                  >
                     <GrUpdate />
                   </button>
                   <button className={style.optionButton} onClick={handleDelete}>
@@ -71,6 +83,9 @@ const Scores = () => {
             ))}
         </tbody>
       </table>
+      {toggleUpdateForm && scoreToUpdate && (
+        <UpdateScore quiz={scoreToUpdate} />
+      )}
     </div>
   );
 };

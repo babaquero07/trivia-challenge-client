@@ -12,8 +12,8 @@ const Navbar = () => {
         </Link>
       </li>
       <li>
-        <a href="/quizzes" className={style.navBar__link}>
-          Quizzes
+        <a href="/questions" className={style.navBar__link}>
+          Questions
         </a>
       </li>
       <li>
